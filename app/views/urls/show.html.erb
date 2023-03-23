@@ -1,0 +1,25 @@
+<h1> Hi showing all URLS </h1>
+
+
+<table>
+	<tr>
+<th> Sl No </th>
+<th> ORIGINAL URL </th>
+<th> SHORT URL </th>
+
+</tr>
+
+<% i = 1 %>
+<% for u in @url %>
+<tr>
+<td> <%= i %> </td>
+<td> <%= u.original %> </td>
+
+<td><%= link_to u.short, u.original %></td>
+
+</tr>
+<% i = i + 1 %>
+
+<% end %>
+
+</table>
